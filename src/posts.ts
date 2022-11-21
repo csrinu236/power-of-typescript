@@ -8,6 +8,9 @@ export interface Post {
 }
 
 export class Posts extends Base {
+  // here, we are not calling constructor,
+  // so no super invocation needed.
+
   getPostById(id: string): Promise<Post> {
     return this.invoke(`/posts/${id}`);
   }
